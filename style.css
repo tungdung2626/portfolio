@@ -181,36 +181,26 @@ body, #main {
 
 .about {
     width: 100%;
-    padding: 10vw 10vw;
+    padding: 5vw 10vw;
     color: white;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center; /* Căn giữa toàn bộ cụm */
+    align-items: center;     /* Căn giữa theo chiều dọc */
     gap: 50px;
-    padding-left: 40vw;
-    margin-top: 300px;
+    margin-top: 100px;
 }
 
-/* KHỐI ĐIỀU CHỈNH AVATAR: Bạn có thể tự thay đổi các con số dưới này theo ý muốn */
 .about img {
-    width: 250px;         /* Thay đổi số này để tăng/giảm ĐỘ TO của ảnh (Ví dụ: 300px, 350px...) */
-    height: 250px;        /* Hãy giữ số này bằng số width ở trên để ảnh luôn là hình tròn chuẩn */
-    border-radius: 50%;   /* Bo tròn ảnh */
-    object-fit: cover;    /* Giúp ảnh không bị bóp méo khi chỉnh kích thước */
-    
-    /* DÒNG TRANSLATE DƯỚI DÙNG ĐỂ DI CHUYỂN ẢNH:
-       - Số đầu tiên (-20px): Âm là dịch sang TRÁI, Dương là dịch sang PHẢI.
-       - Số thứ hai (0px): Âm là dịch lên TRÊN, Dương là dịch xuống DƯỚI. */
-    transform: translate(-20px, 0px); 
+    width: 300px;           /* Cố định ảnh 300px */
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;         /* Không bao giờ được phép co lại */
 }
 
-#aboutme{
-    opacity: 0.7;
-    margin-bottom: 5px;
-    font-size: 14px;
-}
-.textabout{
-    width: 28rem;
+.textabout {
+    width: 50%;             /* Chiếm đúng 50% khung hình */
+    flex-shrink: 0;
 }
 #para{
     line-height: 1.7;
