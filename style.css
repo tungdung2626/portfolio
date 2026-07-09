@@ -182,4 +182,113 @@ body, #main {
 .about {
     width: 100%;
     padding: 10vw 10vw;
-    color: white
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    padding-left: 40vw;
+    margin-top: 300px;
+}
+
+/* KHỐI ĐIỀU CHỈNH AVATAR: Bạn có thể tự thay đổi các con số dưới này theo ý muốn */
+.about img {
+    width: 250px;         /* Thay đổi số này để tăng/giảm ĐỘ TO của ảnh (Ví dụ: 300px, 350px...) */
+    height: 250px;        /* Hãy giữ số này bằng số width ở trên để ảnh luôn là hình tròn chuẩn */
+    border-radius: 50%;   /* Bo tròn ảnh */
+    object-fit: cover;    /* Giúp ảnh không bị bóp méo khi chỉnh kích thước */
+    
+    /* DÒNG TRANSLATE DƯỚI DÙNG ĐỂ DI CHUYỂN ẢNH:
+       - Số đầu tiên (-20px): Âm là dịch sang TRÁI, Dương là dịch sang PHẢI.
+       - Số thứ hai (0px): Âm là dịch lên TRÊN, Dương là dịch xuống DƯỚI. */
+    transform: translate(-20px, 0px); 
+}
+
+#aboutme{
+    opacity: 0.7;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+.textabout{
+    width: 28rem;
+}
+#para{
+    line-height: 1.7;
+    font-size: 18px;
+}
+
+.about button{
+    color: white;
+    font-weight: 500;
+    border: 2px solid white;
+    border-radius: 80px;
+    margin-top: 20px;
+    padding: 5px 20px;
+    font-size: 16px;
+    background-color: transparent;
+}
+
+.about button:hover{
+    color: #000;
+    background-color: #fff;
+    opacity: 0.7;
+    transition-duration: 0.2s;
+}
+
+.subscribe{
+    color: white;
+    font-weight: 500;
+    padding: 20px 30px;
+    padding-right: 43px;
+    padding-bottom: 7vw;
+}
+
+.subscribe div{
+    font-size: 14px;
+    opacity: 0.7;
+}
+.subscribe a{
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.footer{
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 43px;
+}
+.footerleft{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+.footerright{
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+.footerright a{
+    text-decoration: none;
+    color: white;
+}
+
+.underline {
+    position: relative;
+    overflow: hidden;
+}
+
+.underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    border-radius: 10%;
+    background-color: white;
+Normally I can help with things like this, but I don't seem to have access to that content. You can try again or ask me for something else.
