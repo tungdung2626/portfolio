@@ -61,6 +61,18 @@ body {
     color: white;
 }
 
+/* ĐỊNH DẠNG MỚI: Căn chỉnh thanh menu chữ rải ngang ở góc phải */
+.nav-links {
+    display: flex;
+    gap: 30px; /* Khoảng cách giữa các mục menu chữ */
+}
+
+.nav-links a {
+    font-size: 14px !important; /* Thu nhỏ tinh tế giống ảnh mẫu */
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
 /* Giảm nhẹ size chữ từ 10.42vw xuống 8.5vw để không bị tràn màn hình */
 .heading {
     margin-top: 5vw;
