@@ -61,16 +61,19 @@ body {
     color: white;
 }
 
-/* ĐỊNH DẠNG MỚI: Căn chỉnh thanh menu chữ rải ngang ở góc phải */
+/* SỬA LỖI DÍNH CHỮ: Định dạng dàn menu chữ bên phải rải ngang */
 .nav-links {
-    display: flex;
-    gap: 30px; /* Khoảng cách giữa các mục menu chữ */
+    display: flex !important;  /* Ép buộc trình duyệt hiển thị dạng flexbox */
+    flex-direction: row;       /* Xếp các mục theo hàng ngang */
+    gap: 35px !important;      /* Tạo khoảng cách 35px rộng rãi giữa các chữ */
 }
 
 .nav-links a {
-    font-size: 14px !important; /* Thu nhỏ tinh tế giống ảnh mẫu */
+    font-size: 14px !important; 
     font-weight: 600;
-    letter-spacing: 0.5px;
+    letter-spacing: 2px !important; /* Giãn cách các chữ cái ra cho thoáng */
+    white-space: nowrap;            /* Ngăn chữ bị tự động nhảy xuống dòng */
+    display: inline-block;
 }
 
 /* Giảm nhẹ size chữ từ 10.42vw xuống 8.5vw để không bị tràn màn hình */
@@ -154,192 +157,4 @@ body {
 
 .circle i {
     background-color: transparent;
-    color: #2610ff; /* Mũi tên đổi sang màu xanh nền */
-    font-weight: 500;
-}
-
-.second{
-    width: 100%;
-    height: 100vh;
-    padding-top: 200px;
-    padding-right: 10vw;
-    color: #e0e0e0;
-}
-
-.elem{
-    width: 100%;
-    border-top: 1px solid #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-}
-
-.elem div{
-    font-size: 7vw;
-    font-weight: 900;
-    padding-bottom: 3.26vw;
-    padding: 3.5vw 3vw;
-    opacity: 0.8;
-}
-
-.elem {
-    color: white;
-    font-weight: 900;
-}
-
-.elemlast{
-    border-bottom: 1px solid #ffffff;
-}
-
-.elem img{
-    opacity: 0;
-    pointer-events: none;
-    height: 140%;
-    z-index: 999;
-    position: absolute;
-    transform: translate(-50%,-50%);
-}
-
-.about {
-    width: 100%;
-    padding: 10vw 10vw;
-    color: white;
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    gap: 50px;
-    padding-left: 40vw;
-    margin-top: 300px;
-}
-
-.about img{
-    width:15vw;
-}
-#aboutme{
-    opacity: 0.7;
-    margin-bottom: 5px;
-    font-size: 14px;
-}
-.textabout{
-    width: 28rem;
-}
-#para{
-    line-height: 1.7;
-    font-size: 18px;
-}
-
-.about button{
-    color: white;
-    font-weight:500 ;
-    border: 2px solid white;
-    border-radius: 80px;
-    margin-top: 20px;
-    padding: 5px 20px;
-    font-size: 16px;
-    background-color: transparent;
-}
-
-.about button:hover{
-    color: #2610ff;
-    background-color: #fff;
-    opacity: 0.9;
-    transition-duration: 0.2s;
-}
-
-.subscribe{
-    color: white;
-    font-weight:500;
-    padding: 20px 30px;
-    padding-right: 43px;
-    padding-bottom: 7vw;
-}
-
-.subscribe div{
-    font-size: 14px;
-    opacity: 0.7;
-}
-.subscribe a{
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    margin-top: 10px;
-}
-
-.footer{
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    font-size: 16px;
-    font-weight: 500;
-    padding: 10px 43px;
-}
-.footerleft{
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-}
-.footerright{
-    display: flex;
-    justify-content: space-between;
-    gap: 50px;
-}
-.footerright a{
-    text-decoration: none;
-    color: white;
-}
-
-.underline {
-    position: relative;
-    overflow: hidden;
-}
-
-.underline::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 2px;
-    border-radius: 10%;
-    background-color: white;
-    transform: translateX(-110%);
-    transition: transform 0.5s ease;
-}
-
-.underline:hover::after {
-    transform: translateX(0);
-}
-
-.dropdown{
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-}
-
-.dropdown .underline {
-    position: relative;
-    overflow: hidden;
-    display: inline-block;
-    margin: 0 10px;
-}
-
-.dropdown .underline::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 2px;
-    background-color: white;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease;
-}
-
-.dropdown .underline:hover::after {
-    transform: translateX(0);
-}
-
-.dropi{
-    transform: translateY(100%)
-}
+    color: #2610ff; /* Mũi tên đổi sang màu xanh nền
