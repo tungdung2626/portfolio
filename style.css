@@ -5,7 +5,7 @@
     font-family: "General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
-#minicircle{
+#minicircle {
     transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
     width: 1vw;
     height: 1vw;
@@ -18,13 +18,12 @@
 .bounding {
     width: fit-content;
     overflow: hidden;
-    
 }
-.boundingelem{
+
+.boundingelem {
     transform: translateY(100%)
 }
 
-/* ĐÃ THÊM MÀU XANH: Giữ nguyên cấu trúc gốc nhưng đổi nền sang #2610ff */
 body, #main {
     background-color: #2610ff;
     width: 100%;
@@ -135,42 +134,37 @@ body, #main {
     font-weight: 500;
 }
 
-.second{
+.second {
     width: 100%;
     height: 100vh;
     padding-top: 200px;
     padding-right: 10vw;
     color: #a3a3a3;
-    
 }
 
-.elem{
+.elem {
     width: 100%;
     border-top: 1px solid #a3a3a3;
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: relative;
-}
-
-.elem div{
-    font-size: 7vw;
-    font-weight: 900;
-    padding-bottom: 3.26vw;
-    padding: 3.5vw 3vw;
-    opacity: 0.7;
-}
-
-.elem {
     color: white;
     font-weight: 900;
 }
 
-.elemlast{
+.elem div {
+    font-size: 7vw;
+    font-weight: 900;
+    padding: 3.5vw 3vw;
+    opacity: 0.7;
+}
+
+.elemlast {
     border-bottom: 1px solid #a3a3a3;
 }
 
-.elem img{
+.elem img {
     opacity: 0;
     pointer-events: none;
     height: 140%;
@@ -184,30 +178,31 @@ body, #main {
     padding: 5vw 10vw;
     color: white;
     display: flex;
-    justify-content: center; /* Căn giữa toàn bộ cụm */
-    align-items: center;     /* Căn giữa theo chiều dọc */
+    justify-content: center;
+    align-items: center;
     gap: 50px;
     margin-top: 100px;
 }
 
 .about img {
-    width: 300px;           /* Cố định ảnh 300px */
+    width: 300px;
     height: 300px;
     border-radius: 50%;
     object-fit: cover;
-    flex-shrink: 0;         /* Không bao giờ được phép co lại */
+    flex-shrink: 0;
 }
 
 .textabout {
-    width: 50%;             /* Chiếm đúng 50% khung hình */
+    width: 50%;
     flex-shrink: 0;
 }
-#para{
+
+#para {
     line-height: 1.7;
     font-size: 18px;
 }
 
-.about button{
+.about button {
     color: white;
     font-weight: 500;
     border: 2px solid white;
@@ -218,14 +213,14 @@ body, #main {
     background-color: transparent;
 }
 
-.about button:hover{
+.about button:hover {
     color: #000;
     background-color: #fff;
     opacity: 0.7;
     transition-duration: 0.2s;
 }
 
-.subscribe{
+.subscribe {
     color: white;
     font-weight: 500;
     padding: 20px 30px;
@@ -233,18 +228,19 @@ body, #main {
     padding-bottom: 7vw;
 }
 
-.subscribe div{
+.subscribe div {
     font-size: 14px;
     opacity: 0.7;
 }
-.subscribe a{
+
+.subscribe a {
     color: white;
     text-decoration: none;
     font-size: 16px;
     margin-top: 10px;
 }
 
-.footer{
+.footer {
     color: white;
     display: flex;
     justify-content: space-between;
@@ -252,17 +248,20 @@ body, #main {
     font-weight: 500;
     padding: 10px 43px;
 }
-.footerleft{
+
+.footerleft {
     display: flex;
     justify-content: space-between;
     gap: 30px;
 }
-.footerright{
+
+.footerright {
     display: flex;
     justify-content: space-between;
     gap: 50px;
 }
-.footerright a{
+
+.footerright a {
     text-decoration: none;
     color: white;
 }
@@ -281,13 +280,16 @@ body, #main {
     height: 2px;
     border-radius: 10%;
     background-color: white;
+} /* Đã thêm dấu đóng ngoặc ở đây */
+
 .second a.elem {
     text-decoration: none;
     color: inherit;
     display: flex;
     cursor: pointer;
 }
-    /* --- Grid Gallery Styles --- */
+
+/* --- Grid Gallery Styles --- */
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -330,5 +332,3 @@ body, #main {
 .grid-item:hover .overlay {
     opacity: 1;
 }
-Normally I can help with things like this, but I don't seem to have access to that content. You can try again or ask me for something else.
-    
