@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artworks - Nguyễn Tùng Dương</title>
+    <!-- Styles -->
     <link rel="stylesheet" href="loco.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css">
@@ -39,7 +40,6 @@
                 <img src="assets/anh4.jpg" alt="Tác phẩm 4">
                 <div class="overlay">Tác phẩm 4</div>
             </a>
-            <!-- Thêm tiếp các thẻ <a> tại đây -->
         </div>
 
         <!-- Footer -->
@@ -51,7 +51,7 @@
             </div>
         </div>
 
-        <!-- Khối ẩn để script không lỗi -->
+        <!-- Khối ẩn để giữ cấu trúc cho script.js -->
         <div style="display:none;">
             <div class="boundingelem"></div>
             <div id="time"></div>
@@ -65,6 +65,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.2/simple-lightbox.min.js"></script>
     <script src="script.js"></script>
     <script>
+        // Khởi tạo Lightbox cho tất cả ảnh trong gallery-grid
         var lightbox = new SimpleLightbox('.gallery-grid a', {});
     </script>
 </body>
