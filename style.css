@@ -5,14 +5,6 @@
     font-family: "General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
-/* Áp dụng màu xanh chủ đạo #2610ff tại đây để không làm vỡ các khối con */
-body {
-    background-color: #2610ff;
-    color: #fff;
-    width: 100%;
-    height: 100%;
-}
-
 #minicircle{
     transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
     width: 1vw;
@@ -26,15 +18,15 @@ body {
 .bounding {
     width: fit-content;
     overflow: hidden;
-    height: auto; /* Tự động mở rộng không gian cho chữ tiếng Việt dài */
+    
 }
-
 .boundingelem{
-    transform: translateY(100%);
-    display: inline-block;
+    transform: translateY(100%)
 }
 
-#main {
+/* ĐÃ THÊM MÀU XANH: Giữ nguyên cấu trúc gốc nhưng đổi nền sang #2610ff */
+body, #main {
+    background-color: #2610ff;
     width: 100%;
     height: 100%;
 }
@@ -61,52 +53,34 @@ body {
     color: white;
 }
 
-/* SỬA LỖI DÍNH CHỮ: Định dạng dàn menu chữ bên phải rải ngang */
-.nav-links {
-    display: flex !important;  /* Ép buộc trình duyệt hiển thị dạng flexbox */
-    flex-direction: row;       /* Xếp các mục theo hàng ngang */
-    gap: 35px !important;      /* Tạo khoảng cách 35px rộng rãi giữa các chữ */
-}
-
-.nav-links a {
-    font-size: 14px !important; 
-    font-weight: 600;
-    letter-spacing: 2px !important; /* Giãn cách các chữ cái ra cho thoáng */
-    white-space: nowrap;            /* Ngăn chữ bị tự động nhảy xuống dòng */
-    display: inline-block;
-}
-
-/* Giảm nhẹ size chữ từ 10.42vw xuống 8.5vw để không bị tràn màn hình */
 .heading {
-    margin-top: 5vw;
+    margin-top: 7vw;
     padding: 0 43px;
-    font-size: 8.5vw;
+    font-size: 10.42vw;
     font-weight: 500;
-    color: #ffffff; /* Đổi sang màu trắng tinh để hiển thị sắc nét trên nền xanh */
+    color: #a3a3a3;
 }
 
-/* Tăng khoảng cách dòng lên 1.1 để các dấu tiếng Việt không đè ngửa lên nhau */
 .heading div {
-    margin-bottom: 10px;
-    line-height: 1.1;
+    margin-bottom: 0;
+    line-height: 0.8;
 }
 
-/* Đưa khoảng cách lề về 0px giúp họ tên của bạn thẳng hàng tăm tắp */
 #des {
-    margin: 0.5vw 0 0 0px;
+    margin: 0.5vw 0 0 168px;
 }
 
 .block {
     width: fit-content;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Đổi sang canh trái cân đối */
+    align-items: end;
 }
 
 #small {
     font-size: 16px;
     color: white;
-    margin-top: 15px;
+    margin-top: 28px;
 }
 
 .litilehead {
@@ -148,7 +122,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #ffffff; /* Đổi sang màu trắng cho nổi bật trên nền xanh */
+    background-color: #a3a3a3;
     border-radius: 50%;
     width: 30px;
     height: 30px;
@@ -157,4 +131,55 @@ body {
 
 .circle i {
     background-color: transparent;
-    color: #2610ff; /* Mũi tên đổi sang màu xanh nền
+    color: black;
+    font-weight: 500;
+}
+
+.second{
+    width: 100%;
+    height: 100vh;
+    padding-top: 200px;
+    padding-right: 10vw;
+    color: #a3a3a3;
+    
+}
+
+.elem{
+    width: 100%;
+    border-top: 1px solid #a3a3a3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.elem div{
+    font-size: 7vw;
+    font-weight: 900;
+    padding-bottom: 3.26vw;
+    padding: 3.5vw 3vw;
+    opacity: 0.7;
+}
+
+.elem {
+    color: white;
+    font-weight: 900;
+}
+
+.elemlast{
+    border-bottom: 1px solid #a3a3a3;
+}
+
+.elem img{
+    opacity: 0;
+    pointer-events: none;
+    height: 140%;
+    z-index: 999;
+    position: absolute;
+    transform: translate(-50%,-50%);
+}
+
+.about {
+    width: 100%;
+    padding: 10vw 10vw;
+    color: white
