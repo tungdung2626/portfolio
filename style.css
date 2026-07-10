@@ -259,7 +259,8 @@ body, #main {
     position: relative;
     display: block;
     overflow: hidden;
-    border-radius: 10px;
+    aspect-ratio: 1 / 1;
+    border-radius: 20px;
     cursor: zoom-in;
 }
 .grid-item img {
