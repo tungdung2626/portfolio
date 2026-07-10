@@ -24,6 +24,7 @@ body, #main {
     background-color: #2610ff;
     width: 100%;
     height: 100%;
+    color: #ff9663;
 }
 #hero {
     width: 100%;
@@ -41,8 +42,8 @@ body, #main {
 }
 #nav a {
     font-size: 18px;
-    text-decoration: none;
-    color: white;
+    text-decoration: none !important; 
+    color: #ff9663;
 }
 .heading {
     margin-top: 7vw;
@@ -208,7 +209,7 @@ body, #main {
     margin-top: 10px;
 }
 .footer {
-    color: white;
+    color: #ff9663;
     display: flex;
     justify-content: space-between;
     font-size: 16px;
@@ -227,7 +228,7 @@ body, #main {
 }
 .footerright a {
     text-decoration: none;
-    color: white;
+    color: #ff9663;
 }
 .underline {
     position: relative;
@@ -280,7 +281,7 @@ body, #main {
     left: 0;
     right: 0;
     background: rgba(0,0,0,0.7);
-    color: white;
+    color: #ff9663;
     padding: 20px;
     text-align: center;
     opacity: 0;
