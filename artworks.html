@@ -4,61 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artworks - Nguyễn Tùng Dương</title>
-    <!-- Styles -->
     <link rel="stylesheet" href="loco.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css">
-    <!-- Lightbox CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.2/simple-lightbox.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.3/photoswipe.min.css">
 </head>
 <body>
     <div id="minicircle"></div>
     <div id="main">
-        <!-- Navbar -->
         <div id="nav">
-            <a href="index.html" class="under">Nguyễn Tùng Dương</a>
+            <a href="index.html">Nguyễn Tùng Dương</a>
             <div class="nav-links">
-                <a href="index.html" class="under">TRANG CHỦ</a>
+                <a href="index.html">TRANG CHỦ</a>
             </div>
         </div>
 
-        <!-- Gallery Grid -->
-        <div class="gallery-grid">
-            <a href="assets/anh1.jpg" class="grid-item">
+        <div class="gallery-grid" id="my-gallery">
+            <a href="assets/anh1.jpg" data-pswp-width="1200" data-pswp-height="1600" class="grid-item">
                 <img src="assets/anh1.jpg" alt="Tác phẩm 1">
                 <div class="overlay">TỔNG HỢP TRANH VẼ</div>
             </a>
-            <a href="assets/anh2.jpg" class="grid-item">
+            <a href="assets/anh2.jpg" data-pswp-width="1200" data-pswp-height="1600" class="grid-item">
                 <img src="assets/anh2.jpg" alt="Tác phẩm 2">
                 <div class="overlay">THIẾT KẾ BAO BÌ</div>
             </a>
-            <a href="assets/anh3.jpg" class="grid-item">
+            <a href="assets/anh3.jpg" data-pswp-width="1200" data-pswp-height="1600" class="grid-item">
                 <img src="assets/anh3.jpg" alt="Tác phẩm 3">
                 <div class="overlay">Tác phẩm 3</div>
             </a>
-            <a href="assets/anh4.jpg" class="grid-item">
+            <a href="assets/anh4.jpg" data-pswp-width="1200" data-pswp-height="1600" class="grid-item">
                 <img src="assets/anh4.jpg" alt="Tác phẩm 4">
                 <div class="overlay">Tác phẩm 4</div>
             </a>
-            <a href="assets/anh5.JPG" class="grid-item">
-                <img src="assets/anh5.JPG" alt="Tác phẩm 5">
+            <a href="assets/anh5.jpg" data-pswp-width="1200" data-pswp-height="1600" class="grid-item">
+                <img src="assets/anh5.jpg" alt="Tác phẩm 5">
                 <div class="overlay">Tác phẩm 5</div>
             </a>
-             <a href="assets/anh6.jpg" class="grid-item">
+            <a href="assets/anh6.jpg" data-pswp-width="1200" data-pswp-height="1600" class="grid-item">
                 <img src="assets/anh6.jpg" alt="Tác phẩm 6">
                 <div class="overlay">Tác phẩm 6</div>
             </a>
-             <a href="assets/anh7.JPG" class="grid-item">
-                <img src="assets/anh7.JPG" alt="Tác phẩm 7">
+            <a href="assets/anh7.jpg" data-pswp-width="1200" data-pswp-height="1600" class="grid-item">
+                <img src="assets/anh7.jpg" alt="Tác phẩm 7">
                 <div class="overlay">Tác phẩm 7</div>
             </a>
-             <a href="assets/anh8.jpg" class="grid-item">
+            <a href="assets/anh8.jpg" data-pswp-width="1200" data-pswp-height="1600" class="grid-item">
                 <img src="assets/anh8.jpg" alt="Tác phẩm 8">
                 <div class="overlay">Tác phẩm 8</div>
             </a>
         </div>
 
-        <!-- Footer -->
         <div class="footer">
             <div class="footerleft"><div>2026 &copy;</div></div>
             <div class="footerright">
@@ -67,7 +62,6 @@
             </div>
         </div>
 
-        <!-- Khối ẩn để giữ cấu trúc cho script.js -->
         <div style="display:none;">
             <div class="boundingelem"></div>
             <div id="time"></div>
@@ -75,14 +69,18 @@
         </div>
     </div>
     
-    <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.2/simple-lightbox.min.js"></script>
     <script src="script.js"></script>
-    <script>
-        // Khởi tạo Lightbox cho tất cả ảnh trong gallery-grid
-        var lightbox = new SimpleLightbox('.gallery-grid a', {});
+    
+    <script type="module">
+        import PhotoSwipeLightbox from 'https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.3/photoswipe-lightbox.esm.min.js';
+        const lightbox = new PhotoSwipeLightbox({
+            gallery: '#my-gallery',
+            children: 'a',
+            pswpModule: () => import('https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.3/photoswipe.esm.min.js')
+        });
+        lightbox.init();
     </script>
 </body>
 </html>
